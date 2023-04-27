@@ -4,7 +4,7 @@
 
 ## 项目介绍
 
-- 使用`webpack`搭建基于`React`的教授架，(地址)[https://github.com/jiaicon/empty-scaffold]。
+- 使用`webpack`搭建基于`React`的教授架，[地址](https://github.com/jiaicon/empty-scaffold)。
 - 基于`manifest`的V3版本的API
 
 ## 使用方法
