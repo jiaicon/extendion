@@ -55,12 +55,12 @@ module.exports = {
           'postcss-loader',
           {
             loader: 'less-loader',
-            // options: {
-            //   lessOptions: {
-            //     javascriptEnabled: true,
-            //     modifyVars: theme
-            //   }
-            // }
+            options: {
+              // lessOptions: {
+              // javascriptEnabled: true,
+              // modifyVars: theme
+              // }
+            }
           },
         ]
       },

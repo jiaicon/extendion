@@ -1,5 +1,5 @@
 import { getCurrentTabId } from './utils';
-// import type { Color } from './typing';
+// import type { Color } from './typings';
 // import {
 //   red,
 //   volcano,

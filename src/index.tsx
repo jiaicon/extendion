@@ -2,8 +2,9 @@ import React, { useEffect, useState, useRef } from 'react';
 import { ChromePicker } from 'react-color';
 import type { ColorResult } from 'react-color';
 import { createRoot } from 'react-dom/client';
-import type { Color } from './typing';
+import type { Color } from './typings';
 import { getCurrentTabId } from './utils';
+import styles from './styles.less';
 
 // const presetColors = ['#ff4d4f', '#ff7a45', '#ffc53d', '#ffec3d', '#bae637', '#73d13d', '#36cfc9', '#4096ff', '#597ef7', '#9254de'];
 
@@ -12,8 +13,8 @@ const Index = () => {
   const popupPort = useRef<chrome.runtime.Port>();
 
   useEffect(() => {
-    popupPort.current = chrome.runtime.connect({ name: "popup-port" });
-    popupPort.current.onMessage.addListener((message) => {
+    popupPort.current = chrome.runtime?.connect({ name: "popup-port" });
+    popupPort.current?.onMessage.addListener((message) => {
       console.log(message);
     })
     return () => {
@@ -33,6 +34,7 @@ const Index = () => {
     <ChromePicker
       color={value}
       onChange={handleChange}
+      className="picker"
     />
   )
 }
