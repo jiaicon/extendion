@@ -1,6 +1,7 @@
 const WebpackMerge = require("webpack-merge");
 const baseWebpackConfig = require("./webpack.base.config");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require('webpack');
 
 module.exports = WebpackMerge.merge(baseWebpackConfig, {
   // 指定构建环境
@@ -13,6 +14,9 @@ module.exports = WebpackMerge.merge(baseWebpackConfig, {
       inject: true,
       chunks: ['main'],
     }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+    })
   ],
   // 开发环境本地启动的服务配置
   devtool: 'eval-source-map',

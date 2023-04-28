@@ -5,8 +5,8 @@
   "author": "Icon",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --config webpack/webpack.dev.config.js --open",
-    "build": "webpack --config webpack/webpack.prod.config.js"
+    "start": "cross-env NODE_ENV=development && webpack-dev-server --config webpack/webpack.dev.config.js --open",
+    "build": "webpack --config webpack/webpack.prod.config.js -w"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.21.4",

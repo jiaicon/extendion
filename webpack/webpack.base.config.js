@@ -34,34 +34,30 @@ module.exports = {
         exclude: lessModuleRegex,
         use: [
           'style-loader',
-          'css-loader',
-          'postcss-loader',
           {
-            loader: 'less-loader',
-            // options: {
-            //   lessOptions: {
-            //     javascriptEnabled: true,
-            //     modifyVars: theme
-            //   }
-            // }
+            loader: 'css-loader',
+            options: {
+              modules: { // 开启 CSS Module 功能
+                localIdentName: '[path][name]__[local]--[hash:base64:5]' // 定义生成的类名规则
+              }
+            }
           },
+          'postcss-loader',
+          'less-loader',
         ]
       },
       {
         test: lessModuleRegex,
         use: [
           'style-loader',
-          'css-loader',
-          'postcss-loader',
           {
-            loader: 'less-loader',
+            loader: 'css-loader',
             options: {
-              // lessOptions: {
-              // javascriptEnabled: true,
-              // modifyVars: theme
-              // }
+              modules: true // 开启 CSS Module 功能
             }
           },
+          'postcss-loader',
+          'less-loader',
         ]
       },
       {

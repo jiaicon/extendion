@@ -6,8 +6,6 @@ import type { Color } from './typings';
 import { getCurrentTabId } from './utils';
 import styles from './styles.less';
 
-// const presetColors = ['#ff4d4f', '#ff7a45', '#ffc53d', '#ffec3d', '#bae637', '#73d13d', '#36cfc9', '#4096ff', '#597ef7', '#9254de'];
-
 const Index = () => {
   const [value, setValue] = useState<Color>({ r: 241, g: 153, b: 44, a: 1 });
   const popupPort = useRef<chrome.runtime.Port>();
@@ -34,7 +32,7 @@ const Index = () => {
     <ChromePicker
       color={value}
       onChange={handleChange}
-      className="picker"
+      className={styles.picker}
     />
   )
 }
