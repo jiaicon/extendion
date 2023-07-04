@@ -6,6 +6,7 @@ const resolve = (link) => path.resolve(__dirname, link);
 module.exports = {
   entry: {
     background: path.join(__dirname, '../src/background.ts'),
+    contentScript: path.join(__dirname, '../src/contentScript.ts'),
     main: path.join(__dirname, '../src/index.tsx'),
   },
   module: {

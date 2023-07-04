@@ -7,6 +7,16 @@
     "service_worker": "background.js",
     "name": "背景图"
   },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://git.socmap.net/*"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ],
   "permissions": [
     "storage",
     "activeTab",

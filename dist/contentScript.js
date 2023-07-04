@@ -1,0 +1,1 @@
+(()=>{var o,e;console.log(1111),console.log(document.getElementsByClassName("tanuki-logo-container")),null===(o=document.getElementsByClassName("tanuki-logo-container"))||void 0===o||null===(e=o[0])||void 0===e||e.setAttribute("style","background-color: #000")})();
