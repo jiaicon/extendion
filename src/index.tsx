@@ -15,6 +15,8 @@ const Index = () => {
     popupPort.current?.onMessage.addListener((message) => {
       console.log(message);
     })
+    // gitlab logo
+    document.getElementsByClassName('tanuki-logo-container')?.[0]?.setAttribute('style', 'background-color: #000');
     return () => {
       popupPort.current?.disconnect();
     }
