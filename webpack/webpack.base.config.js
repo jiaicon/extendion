@@ -7,6 +7,7 @@ module.exports = {
   entry: {
     background: path.join(__dirname, '../src/background.ts'),
     contentScript: path.join(__dirname, '../src/contentScript.ts'),
+    gitlab: path.join(__dirname, '../src/gitlab.ts'),
     main: path.join(__dirname, '../src/index.tsx'),
   },
   module: {

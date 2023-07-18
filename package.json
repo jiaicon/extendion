@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "cross-env NODE_ENV=development && webpack-dev-server --config webpack/webpack.dev.config.js --open",
-    "build": "webpack --config webpack/webpack.prod.config.js -w"
+    "build": "webpack --config webpack/webpack.prod.config.js"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.21.4",
